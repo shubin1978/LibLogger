@@ -40,22 +40,22 @@ public class FileLogger : ILogger
 
     public void Error(string message)
     {
-        FileHelper.WriteToFile(_info, $"{DateTime.Now} [{nameof(Error).ToUpper()}] {message}");
+        FileHelper.WriteToFile(_error, $"{DateTime.Now} [{nameof(Error).ToUpper()}] {message}");
     }
 
     public void Warning(string message)
     {
-        FileHelper.WriteToFile(_info, $"{DateTime.Now} [{nameof(Warning).ToUpper()}] {message}");
+        FileHelper.WriteToFile(_warning, $"{DateTime.Now} [{nameof(Warning).ToUpper()}] {message}");
     }
 
     public void Success(string message)
     {
-        FileHelper.WriteToFile(_info, $"{DateTime.Now} [{nameof(Success).ToUpper()}] {message}");
+        FileHelper.WriteToFile(_success, $"{DateTime.Now} [{nameof(Success).ToUpper()}] {message}");
     }
 
     public void Custom(string type, string message)
     {
-        FileHelper.WriteToFile(_info, $"{DateTime.Now} [{nameof(Custom).ToUpper()}] {message}");
+        FileHelper.WriteToFile(_custom, $"{DateTime.Now} [{nameof(Custom).ToUpper()}] {message}");
     }
     
 }
